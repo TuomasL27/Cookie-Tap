@@ -14,7 +14,7 @@ FONT_COLOR = (0, 0, 0)
 
 pg.init()
 win = pg.display.set_mode((WIDTH, HEIGHT))
-pg.display.set_caption("Cookie Tap")
+pg.display.set_caption("Cookie Clicker")
 
 font = pg.font.SysFont(None, FONT_SIZE)
 coin_img = pg.image.load(os.path.join("assets", "coin.png"))
