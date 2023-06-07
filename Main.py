@@ -27,11 +27,15 @@ mixer.music.load(os.path.join("sound", "Game_Theme.mp3"))
 mixer.music.set_volume(0.7)
 mixer.music.play()
 
+
 def load_asset(filename, size=(100, 100), folder="assets"):
     asset = pg.image.load(os.path.join(folder, filename))
     return pg.transform.scale(asset, size)
 
+
 BG = load_asset("BQB.png", size=(WIDTH, HEIGHT))
+JAR = load_asset("Jar.png", size=(639,100))
+
 
 def draw(cookie_img, cookie_count):
     win.fill(WHITE)
@@ -50,7 +54,15 @@ def draw(cookie_img, cookie_count):
     win.blit(text_surface, text_rect)
     win.blit(coin_img, coin_coords)
     win.blit(cookie_img, (x, y))
+    win.blit(JAR, (WIDTH-642,390))
+    win.blit(JAR, (WIDTH - 642, 490))
+    win.blit(JAR, (WIDTH - 642, 590))
+    win.blit(JAR, (WIDTH - 642, 690))
+    win.blit(JAR, (WIDTH - 642, 790))
+    win.blit(JAR, (WIDTH - 642, 890))
+    win.blit(JAR, (WIDTH - 642, 990))
     pg.display.update()
+
 
 def scale_cookie(cookie_img, target_size, duration_sec, cookie_count):
     original_size = cookie_img.get_size()
